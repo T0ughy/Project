@@ -28,7 +28,6 @@ namespace Project_Assistant_Client
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             if(person != null)
             {
-                Console.WriteLine(FirstNameTextBox.Text);
                 _person = person;
                 FirstNameTextBox.Text = person.FirstName;
                 LastNameTextBox.Text = person.LastName;
@@ -36,7 +35,7 @@ namespace Project_Assistant_Client
                 SocialSecurityNumberTextBox.Text = person.SocialSecurityNumber;
                 AddressTextBox.Text = person.Address;
                 SymptomTextBox.Text = person.Symptom;
-
+                
                 CreateButton.Visibility = Visibility.Collapsed;
             }
             else
@@ -60,6 +59,7 @@ namespace Project_Assistant_Client
                 _person.SocialSecurityNumber = SocialSecurityNumberTextBox.Text;
                 _person.Address = AddressTextBox.Text;
                 _person.Symptom = SymptomTextBox.Text;
+                _person.LastTimeEdited = DateTime.Now;
 
                 PersonDataProvider.CreatePerson(_person);
                 DialogResult = true;
@@ -161,7 +161,7 @@ namespace Project_Assistant_Client
                 {
                     i++;
                 }
-                if (!Char.IsDigit(ssn[i)){
+                if (!Char.IsDigit(ssn[i])){
                     return false;
                 }
             }

@@ -1,33 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_Server.Models
+namespace Project_Doctor_Client.Models
 {
     public class Person
-    {   [Key]
+    {
         public long Id { get; set; }
-        [Required]
-        [MaxLength(25)]
         public string FirstName { get; set; }
-        [Required]
-        [MaxLength(25)]
         public string LastName { get; set; }
-        [Required]
         public DateTime DateOfArrival { get; set; }
-        [Required]
-        [MaxLength(11)]
         public string SocialSecurityNumber { get; set; }
-        [Required]
-        [MaxLength(100)]
         public string Address { get; set; }
-        [Required]
-        [MaxLength(200)]
         public string Symptom { get; set; }
-        [MaxLength(200)]
         public string Diagnosis { get; set; }
         public DateTime LastTimeEdited { get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName} {SocialSecurityNumber} {LastTimeEdited}";
+        }
     }
 }

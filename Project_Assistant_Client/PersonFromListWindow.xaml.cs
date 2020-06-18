@@ -30,6 +30,7 @@ namespace Project_Assistant_Client
             SocialSecurityNumberLabel.Content = person.SocialSecurityNumber;
             AddressLabel.Content = person.Address;
             SymptomLabel.Content = person.Symptom;
+            LastTimeEditedLabel.Content = person.LastTimeEdited;
         }
     }
 }

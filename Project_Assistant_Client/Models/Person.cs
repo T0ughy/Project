@@ -16,6 +16,7 @@ namespace Project_Assistant_Client.Models
         public string Address { get; set; }
         public string Symptom { get; set; }
         public string Diagnosis { get; set; }
+        public DateTime LastTimeEdited { get; set; }
 
         public override string ToString()
         {
