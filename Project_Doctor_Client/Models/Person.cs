@@ -20,7 +20,7 @@ namespace Project_Doctor_Client.Models
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName} {SocialSecurityNumber} {LastTimeEdited}";
+            return $"Name: {FirstName} {LastName} | SSN: {SocialSecurityNumber} | Last time edited: {LastTimeEdited}";
         }
     }
 }

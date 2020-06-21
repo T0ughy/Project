@@ -1,0 +1,11 @@
+ssn, expected
+123 123 123, true
+456 789 910, true
+12 23 34, false
+12 23 34 45, false
+111 111 11b, false
+2!1 234 456, false
+   , false
+01    33242  , false
+1@1 123 123, false
+111 2{n 3+4, false

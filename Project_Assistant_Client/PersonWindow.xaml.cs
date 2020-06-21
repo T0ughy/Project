@@ -35,7 +35,6 @@ namespace Project_Assistant_Client
                 SocialSecurityNumberTextBox.Text = person.SocialSecurityNumber;
                 AddressTextBox.Text = person.Address;
                 SymptomTextBox.Text = person.Symptom;
-                
                 CreateButton.Visibility = Visibility.Collapsed;
             }
             else
@@ -60,7 +59,6 @@ namespace Project_Assistant_Client
                 _person.Address = AddressTextBox.Text;
                 _person.Symptom = SymptomTextBox.Text;
                 _person.LastTimeEdited = DateTime.Now;
-
                 PersonDataProvider.CreatePerson(_person);
                 DialogResult = true;
                 Close();
@@ -79,16 +77,6 @@ namespace Project_Assistant_Client
                 _person.Symptom = SymptomTextBox.Text;
 
                 PersonDataProvider.UpdatePerson(_person);
-                DialogResult = true;
-                Close();
-            }
-        }
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-            if(MessageBox.Show("Do you really want to delete?" , "Question", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                PersonDataProvider.DeletePerson(_person.Id);
                 DialogResult = true;
                 Close();
             }
@@ -151,7 +139,11 @@ namespace Project_Assistant_Client
 
         public bool SocialSecurityNumberIsValid(string ssn)
         {
-            if(ssn[3]!=' ' || ssn[7]!=' ' || ssn.Length!=11)
+            if (ssn.Length != 11)
+            {
+                return false;
+            }
+            if(ssn[3]!=' ' || ssn[7]!=' ')
             {
                 return false;
             }

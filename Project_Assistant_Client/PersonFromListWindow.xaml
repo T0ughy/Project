@@ -25,6 +25,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" Content="First name:" Margin="10" Foreground="Coral"/>
@@ -45,8 +46,11 @@
             <Label Grid.Column="0" Grid.Row="5" Content="Symptom:" Margin="10" Foreground="Coral"/>
             <Label Grid.Column="1" Grid.Row="5" x:Name="SymptomLabel" Margin="10" Foreground="Coral"/>
 
-            <Label Grid.Column="0" Grid.Row="6" Content="Last time edited:" Margin="10" Foreground="Coral"/>
-            <Label Grid.Column="1" Grid.Row="6" x:Name="LastTimeEditedLabel" Margin="10" Foreground="Coral"/>
+            <Label Grid.Column="0" Grid.Row="6" Content="Diagnosis:" Margin="10" Foreground="Coral"/>
+            <Label Grid.Column="1" Grid.Row="6" x:Name="DiagnosisLabel" Margin="10" Foreground="Coral"/>
+            
+            <Label Grid.Column="0" Grid.Row="7" Content="Last time edited:" Margin="10" Foreground="Coral"/>
+            <Label Grid.Column="1" Grid.Row="7" x:Name="LastTimeEditedLabel" Margin="10" Foreground="Coral"/>
         </Grid>
     </Grid>
 </Window>

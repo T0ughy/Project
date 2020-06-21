@@ -1,0 +1,10 @@
+name, expected
+Barnes, true
+BenYedder, false
+Sócrates, false
+Socrates, true
+Clinton-Dix, false
+Best1, false
+Ron@ldo, false
+Neyne!y, false
+Merten/s, false

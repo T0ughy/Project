@@ -36,6 +36,7 @@ namespace Project_Doctor_Client
                 AddressTextBox.Text = _person.Address;
                 SymptomTextBox.Text = _person.Symptom;
                 DiagnosisTextBox.Text = _person.Diagnosis;
+                LastTimeEditedTextBox.Content = _person.LastTimeEdited;
             }
         }
 
@@ -124,7 +125,11 @@ namespace Project_Doctor_Client
 
         public bool SocialSecurityNumberIsValid(string ssn)
         {
-            if (ssn[3] != ' ' || ssn[7] != ' ' || ssn.Length != 11)
+            if (ssn.Length != 11)
+            {
+                return false;
+            }
+            if (ssn[3] != ' ' || ssn[7] != ' ')
             {
                 return false;
             }
